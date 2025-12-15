@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,6 +13,7 @@ import Resume from './components/Resume';
 function App() {
     return (
         <div className="bg-black min-h-screen text-white selection:bg-star-blue selection:text-black cursor-none">
+            <Analytics />
             <CustomCursor />
             <Navbar />
             <Hero />
