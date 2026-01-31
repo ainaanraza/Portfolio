@@ -10,8 +10,8 @@ export default {
                 'cosmic-bg': '#050505',
                 'cosmic-card': 'rgba(255, 255, 255, 0.05)',
                 'cosmic-text': '#e0e0e0',
-                'star-blue': '#90cdf4',
-                'star-purple': '#d6bcfa',
+                'cosmic-red': '#ff1a1a', // Much brighter red for visibility
+                'cosmic-dark-red': '#870505',
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],

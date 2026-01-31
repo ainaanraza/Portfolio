@@ -87,7 +87,7 @@ const Projects = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                        <span className="text-star-purple">Featured</span> Projects
+                        <span className="text-cosmic-red">Featured</span> Projects
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
                         A collection of projects demonstrating my skills in frontend development, machine learning, and software engineering.
@@ -146,15 +146,15 @@ const ProjectCard = ({ project, index, mousePosition }) => {
                 rotateX: tilt.x,
                 rotateY: tilt.y,
             }}
-            className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-star-purple/50 transition-all group"
+            className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cosmic-dark-red/50 transition-all group"
         >
             <div className="h-48 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-star-purple/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <Atom className="text-gray-700 group-hover:text-star-purple transition-colors duration-500" size={64} />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cosmic-red/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Atom className="text-gray-700 group-hover:text-cosmic-red transition-colors duration-500" size={64} />
             </div>
 
             <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-star-purple transition-colors">{project.title}</h3>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-cosmic-red transition-colors">{project.title}</h3>
                 <p className="text-gray-400 text-sm mb-4 line-clamp-3">
                     {project.description}
                 </p>

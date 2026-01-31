@@ -16,7 +16,7 @@ const OrbitalAtom = ({ size = 200 }) => {
                     ease: "easeInOut",
                 }}
             >
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-star-blue to-star-purple shadow-lg shadow-star-blue/50" />
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cosmic-red to-cosmic-dark-red shadow-lg shadow-cosmic-red/50" />
             </motion.div>
 
             {/* Orbital paths and electrons */}
@@ -45,7 +45,7 @@ const OrbitalAtom = ({ size = 200 }) => {
                             transformOrigin: `center ${size / 2}px`,
                         }}
                     >
-                        <div className="w-3 h-3 rounded-full bg-star-blue shadow-lg shadow-star-blue/80" />
+                        <div className="w-3 h-3 rounded-full bg-cosmic-red shadow-lg shadow-cosmic-red/80" />
                     </motion.div>
                 </div>
             ))}

@@ -48,7 +48,7 @@ const DNAHelix = ({ width = 100, height = 200 }) => {
                             y1={y}
                             x2={x2}
                             y2={y}
-                            stroke="rgba(144, 205, 244, 0.5)"
+                            stroke="rgba(211, 47, 47, 0.5)"
                             strokeWidth="2"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: [0.3, 0.7, 0.3] }}
@@ -64,12 +64,12 @@ const DNAHelix = ({ width = 100, height = 200 }) => {
 
                 <defs>
                     <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor="#90cdf4" />
-                        <stop offset="100%" stopColor="#d6bcfa" />
+                        <stop offset="0%" stopColor="#D32F2F" />
+                        <stop offset="100%" stopColor="#7F0000" />
                     </linearGradient>
                     <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor="#d6bcfa" />
-                        <stop offset="100%" stopColor="#90cdf4" />
+                        <stop offset="0%" stopColor="#7F0000" />
+                        <stop offset="100%" stopColor="#D32F2F" />
                     </linearGradient>
                 </defs>
             </svg>

@@ -30,8 +30,8 @@ const Navbar = () => {
                     animate={{ opacity: 1, x: 0 }}
                     className="flex items-center gap-2 font-display text-2xl font-bold text-white"
                 >
-                    <Atom className="text-star-blue animate-spin-slow" size={32} />
-                    <span>Portfolio-Inspired By Einstein's Theories<span className="text-star-blue">.</span></span>
+                    <Atom className="text-cosmic-red animate-spin-slow" size={32} />
+                    <span>Portfolio-Inspired By Einstein's Theories<span className="text-cosmic-red">.</span></span>
                 </motion.div>
 
                 {/* Desktop Menu */}
@@ -43,7 +43,7 @@ const Navbar = () => {
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="text-gray-300 hover:text-star-blue transition-colors font-medium"
+                            className="text-gray-300 hover:text-cosmic-red transition-colors font-medium"
                         >
                             {link.name}
                         </motion.a>
@@ -71,7 +71,7 @@ const Navbar = () => {
                                 key={link.name}
                                 href={link.href}
                                 onClick={() => setIsOpen(false)}
-                                className="text-xl text-gray-300 hover:text-star-blue"
+                                className="text-xl text-gray-300 hover:text-cosmic-red"
                             >
                                 {link.name}
                             </a>

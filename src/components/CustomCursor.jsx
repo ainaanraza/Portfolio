@@ -60,7 +60,7 @@ const CustomCursor = () => {
                     stiffness: 100,
                 }}
             >
-                <div className="w-10 h-10 rounded-full border-2 border-star-blue opacity-50" />
+                <div className="w-10 h-10 rounded-full border-2 border-cosmic-red opacity-50" />
             </motion.div>
 
             {/* Trail effect */}
@@ -76,7 +76,7 @@ const CustomCursor = () => {
                     stiffness: 50,
                 }}
             >
-                <div className="w-[60px] h-[60px] rounded-full bg-gradient-to-r from-star-blue to-star-purple blur-xl opacity-30" />
+                <div className="w-[60px] h-[60px] rounded-full bg-gradient-to-r from-cosmic-red to-cosmic-dark-red blur-xl opacity-30" />
             </motion.div>
         </>
     );

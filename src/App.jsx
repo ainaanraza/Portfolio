@@ -12,7 +12,7 @@ import Resume from './components/Resume';
 
 function App() {
     return (
-        <div className="bg-black min-h-screen text-white selection:bg-star-blue selection:text-black cursor-none">
+        <div className="bg-black min-h-screen text-white selection:bg-cosmic-red selection:text-black cursor-none">
             <Analytics />
             <CustomCursor />
             <Navbar />

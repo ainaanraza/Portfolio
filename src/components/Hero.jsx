@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import FloatingFormulas from './FloatingFormulas';
+import profilePic from '../assets/profile-red.jpg';
 
 const Hero = () => {
     const canvasRef = useRef(null);
@@ -78,7 +79,7 @@ const Hero = () => {
                 this.life = 100;
                 this.maxLife = 100;
                 this.trail = [];
-                this.color = Math.random() > 0.5 ? '144, 205, 244' : '214, 188, 250'; // star-blue or star-purple
+                this.color = Math.random() > 0.5 ? '211, 47, 47' : '127, 0, 0'; // cosmic-red or cosmic-dark-red
             }
 
             update() {
@@ -209,7 +210,17 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-star-blue font-medium tracking-widest mb-4 uppercase">Developer</h2>
+                    {/* Profile Photo */}
+                    <div className="mb-8 relative inline-block group">
+                        <div className="absolute -inset-1 bg-gradient-to-r from-cosmic-red to-cosmic-dark-red rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                        <img
+                            src={profilePic}
+                            alt="Profile"
+                            className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-white/10 object-cover shadow-2xl shadow-cosmic-red/20"
+                        />
+                    </div>
+
+                    <h2 className="text-cosmic-red font-medium tracking-widest mb-4 uppercase">Developer</h2>
                     <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
                         Ainaan <span className="text-white">Raza</span>
                     </h1>
@@ -231,11 +242,11 @@ const Hero = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className={`px-8 py-3 border rounded-full transition-colors ${warpSpeed
-                                ? 'border-star-blue bg-star-blue/20 text-star-blue'
+                                ? 'border-cosmic-red bg-cosmic-red/20 text-cosmic-red'
                                 : 'border-white/20 text-white hover:bg-white/10'
                                 }`}
                         >
-                            {warpSpeed ? '⚡ Warp Active' : '🚀 Warp Speed'}
+                            {warpSpeed ? 'Warp Active' : 'Warp Speed'}
                         </motion.button>
                     </div>
                 </motion.div>

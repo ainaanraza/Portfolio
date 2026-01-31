@@ -38,7 +38,7 @@ const About = () => {
 
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.strokeStyle = 'rgba(144, 205, 244, 0.15)';
+            ctx.strokeStyle = 'rgba(211, 47, 47, 0.15)';
             ctx.lineWidth = 1;
 
             // Draw horizontal lines with distortion
@@ -105,10 +105,10 @@ const About = () => {
     }, []);
 
     const features = [
-        { icon: <Code className="text-star-blue" size={32} />, title: 'Programming', description: 'JavaScript, Java, Python, C' },
-        { icon: <Globe className="text-green-400" size={32} />, title: 'Frontend', description: 'HTML5, CSS3, React.js, Responsive Web Design' },
-        { icon: <Rocket className="text-pink-400" size={32} />, title: 'Tools & Platforms', description: 'Git, GitHub, VS Code, Vercel, Docker, AWS (basic deployments)' },
-        { icon: <Brain className="text-star-purple" size={32} />, title: 'Concepts', description: 'Component-based architecture, REST APIs, State management, OOP, DSA' },
+        { icon: <Code className="text-cosmic-red" size={32} />, title: 'Programming', description: 'JavaScript, Java, Python, C' },
+        { icon: <Globe className="text-white" size={32} />, title: 'Frontend', description: 'HTML5, CSS3, React.js, Responsive Web Design' },
+        { icon: <Rocket className="text-cosmic-red" size={32} />, title: 'Tools & Platforms', description: 'Git, GitHub, VS Code, Vercel, Docker, AWS (basic deployments)' },
+        { icon: <Brain className="text-cosmic-red" size={32} />, title: 'Concepts', description: 'Component-based architecture, REST APIs, State management, OOP, DSA' },
     ];
 
     return (
@@ -126,7 +126,7 @@ const About = () => {
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                        Technical <span className="text-star-blue">Skills</span>
+                        Technical <span className="text-cosmic-red">Skills</span>
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
                         Skilled in translating requirements into clean, maintainable code and deploying applications using Docker, AWS, and Vercel. Experienced in creating data-driven and education-focused web applications and collaborating in academic and personal projects.
@@ -135,7 +135,7 @@ const About = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {features.map((feature, index) => (
-                        <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-star-blue/50 transition-colors group backdrop-blur-sm">
+                        <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cosmic-red/50 transition-colors group backdrop-blur-sm">
                             <div className="mb-4 p-3 bg-white/5 rounded-xl w-fit group-hover:bg-white/10 transition-colors">
                                 {feature.icon}
                             </div>

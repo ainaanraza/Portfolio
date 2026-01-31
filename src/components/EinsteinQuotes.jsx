@@ -35,7 +35,7 @@ const EinsteinQuotes = () => {
                     <p className="text-lg md:text-xl text-gray-400 italic font-serif">
                         "{quotes[currentIndex]}"
                     </p>
-                    <p className="text-sm text-star-blue mt-2">- Albert Einstein</p>
+                    <p className="text-sm text-cosmic-red mt-2">- Albert Einstein</p>
                 </motion.div>
             </AnimatePresence>
         </div>

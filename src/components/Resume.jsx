@@ -49,7 +49,7 @@ const Resume = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-                        Resume <span className="text-star-blue">Highlights</span>
+                        Resume <span className="text-cosmic-red">Highlights</span>
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
                         A journey through academia, certifications, and milestones.
@@ -64,15 +64,15 @@ const Resume = () => {
                         viewport={{ once: true }}
                     >
                         <div className="flex items-center gap-3 mb-8">
-                            <GraduationCap className="text-star-blue" size={32} />
+                            <GraduationCap className="text-cosmic-red" size={32} />
                             <h3 className="text-2xl font-bold">Education</h3>
                         </div>
                         <div className="space-y-8">
                             {education.map((edu, index) => (
                                 <div key={index} className="relative pl-8 border-l border-white/10">
-                                    <div className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-star-blue"></div>
+                                    <div className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-cosmic-red"></div>
                                     <h4 className="text-xl font-bold text-white">{edu.degree}</h4>
-                                    <p className="text-star-purple font-medium mb-2">{edu.institution}</p>
+                                    <p className="text-cosmic-dark-red font-medium mb-2">{edu.institution}</p>
                                     <p className="text-gray-400 text-sm">{edu.details}</p>
                                 </div>
                             ))}
@@ -87,12 +87,12 @@ const Resume = () => {
                             viewport={{ once: true }}
                         >
                             <div className="flex items-center gap-3 mb-8">
-                                <Award className="text-pink-400" size={32} />
+                                <Award className="text-cosmic-dark-red" size={32} />
                                 <h3 className="text-2xl font-bold">Certifications</h3>
                             </div>
                             <div className="grid grid-cols-1 gap-4">
                                 {certifications.map((cert, index) => (
-                                    <div key={index} className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-pink-400/50 transition-colors">
+                                    <div key={index} className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-cosmic-dark-red/50 transition-colors">
                                         <p className="text-gray-300">{cert}</p>
                                     </div>
                                 ))}
@@ -100,7 +100,7 @@ const Resume = () => {
                                     href="https://www.linkedin.com/in/ainaan-raza-a1569428b/details/certifications/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 hover:border-star-blue transition-all text-center text-star-blue font-medium"
+                                    className="p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 hover:border-cosmic-red transition-all text-center text-cosmic-red font-medium"
                                 >
                                     View All Certifications →
                                 </a>
