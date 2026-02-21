@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import OrbitalAtom from './OrbitalAtom';
-import DNAHelix from './DNAHelix';
 import EinsteinQuotes from './EinsteinQuotes';
 
 const Contact = () => {
@@ -76,10 +75,9 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        {/* Orbital Atom and DNA Helix */}
+                        {/* Orbital Atom */}
                         <div className="flex gap-8 justify-center mt-12">
                             <OrbitalAtom size={150} />
-                            <DNAHelix width={80} height={150} />
                         </div>
                     </motion.div>
 

@@ -15,28 +15,28 @@ const Projects = () => {
 
     const projects = [
         {
-            title: "Garage Management Software – GarageMax",
+            title: "GarageMax – Garage Management Software ",
             description: "Built a responsive garage management dashboard to track vehicles, services, and statuses using HTML, CSS, and JavaScript. Implemented dynamic UI interactions and deployed on Vercel.",
             tags: ["HTML", "CSS", "JavaScript", "Vercel"],
             links: { demo: "https://garagemax.vercel.app", github: "https://github.com/ainaanraza/GarageManager" }
         },
         {
-            title: "NaturalHealer – Wellness Landing / Web App",
+            title: "NaturalHealer – Wellness App",
             description: "Developed a modern, responsive landing page for a wellness/health-focused brand using HTML, CSS, and JavaScript, emphasizing clean layout and mobile-first design.",
-            tags: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-            links: { demo: "#", github: "https://github.com/ainaanraza/NaturalHealer" }
+            tags: ["HTML", "CSS", "React", "Responsive Design"],
+            links: { demo: "https://natural-healer.vercel.app", github: "https://github.com/ainaanraza/NaturalHealer" }
+        },
+        {
+            title: "Aidube – A Modern Classroom",
+            description: "Aidube helps you learn faster and smarter by providing freely available educational content built on AI-powered roadmaps and structured guidance.",
+            tags: ["HTML", "CSS", "React", "Firebase", "Flask", "Education"],
+            links: { demo: "https://aidube.com", github: "#" }
         },
         {
             title: "House Pricing Prediction",
             description: "Created a user-friendly web interface for predicting house prices using a machine learning model. Integrated frontend with backend/ML service and containerized using Docker.",
             tags: ["ML", "Docker", "AWS", "Frontend"],
             links: { demo: "#", github: "https://github.com/ainaanraza/House-Pricing-Prediction" }
-        },
-        {
-            title: "YourClassroom – Self-Paced Education Platform",
-            description: "Built a web platform that curates YouTube-based educational content into a focused, distraction-free virtual classroom environment using HTML, CSS, and JavaScript.",
-            tags: ["HTML", "CSS", "JavaScript", "Education"],
-            links: { demo: "#", github: "#" }
         },
         {
             title: "Sentiment Analysis Web App",

@@ -5,19 +5,21 @@ import FloatingFormulas from './FloatingFormulas';
 
 const About = () => {
     const canvasRef = useRef(null);
-    const mouseRef = useRef({ x: 0, y: 0 });
+    const mouseRef = useRef({ x: -1000, y: -1000 }); // start off-screen
 
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
 
         const ctx = canvas.getContext('2d');
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
 
-        const gridSize = 40;
-        const rows = Math.ceil(canvas.height / gridSize) + 1;
-        const cols = Math.ceil(canvas.width / gridSize) + 1;
+        const updateSize = () => {
+            canvas.width = canvas.parentElement.offsetWidth;
+            canvas.height = canvas.parentElement.offsetHeight;
+        };
+        updateSize();
+
+        const gridSize = 50;
 
         const handleMouseMove = (e) => {
             const rect = canvas.getBoundingClientRect();
@@ -28,8 +30,7 @@ const About = () => {
         };
 
         const handleResize = () => {
-            canvas.width = canvas.offsetWidth;
-            canvas.height = canvas.offsetHeight;
+            updateSize();
         };
 
         // Use window listeners to capture mouse movement over the whole page
@@ -38,8 +39,11 @@ const About = () => {
 
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.strokeStyle = 'rgba(211, 47, 47, 0.15)';
-            ctx.lineWidth = 1;
+            ctx.strokeStyle = 'rgba(211, 47, 47, 0.4)'; // Increased visibility
+            ctx.lineWidth = 1.5;
+
+            const rows = Math.ceil(canvas.height / gridSize) + 1;
+            const cols = Math.ceil(canvas.width / gridSize) + 1;
 
             // Draw horizontal lines with distortion
             for (let i = 0; i < rows; i++) {
@@ -114,7 +118,7 @@ const About = () => {
     return (
         <section id="about" className="py-20 bg-black text-white relative overflow-hidden">
             {/* Spacetime Grid Canvas */}
-            <canvas ref={canvasRef} className="absolute inset-0 w-full h-full opacity-50" />
+            <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
 
             {/* Floating Formulas */}
             <FloatingFormulas formulas={[
