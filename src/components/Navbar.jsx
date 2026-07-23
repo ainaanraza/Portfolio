@@ -28,10 +28,12 @@ const Navbar = () => {
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    className="flex items-center gap-2 font-display text-2xl font-bold text-white"
+                    className="flex items-center gap-2 font-display font-bold text-white z-50"
                 >
-                    <Atom className="text-cosmic-red animate-spin-slow" size={32} />
-                    <span>Portfolio-Inspired By Einstein's Theories<span className="text-cosmic-red">.</span></span>
+                    <Atom className="text-cosmic-red animate-spin-slow shrink-0 w-6 h-6 md:w-8 md:h-8" />
+                    <span className="text-sm sm:text-base md:text-2xl leading-tight max-w-[65vw] md:max-w-none">
+                        Portfolio-Inspired By Einstein's Theories<span className="text-cosmic-red">.</span>
+                    </span>
                 </motion.div>
 
                 {/* Desktop Menu */}

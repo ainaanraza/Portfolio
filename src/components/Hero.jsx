@@ -153,8 +153,8 @@ const Hero = () => {
             canvas.height = window.innerHeight;
         };
 
-        canvas.addEventListener('mousemove', handleMouseMove);
-        canvas.addEventListener('click', handleClick);
+        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('click', handleClick);
         window.addEventListener('resize', handleResize);
 
         // Animation loop
@@ -181,14 +181,14 @@ const Hero = () => {
         animate();
 
         return () => {
-            canvas.removeEventListener('mousemove', handleMouseMove);
-            canvas.removeEventListener('click', handleClick);
+            window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('click', handleClick);
             window.removeEventListener('resize', handleResize);
         };
     }, [warpSpeed]);
 
     return (
-        <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-cosmic-bg">
+        <section id="home" className="relative h-[100svh] min-h-[500px] flex items-center justify-center overflow-hidden bg-cosmic-bg pt-16 md:pt-20 pb-4">
             {/* Canvas Background */}
             <canvas ref={canvasRef} className="absolute inset-0 z-10 cursor-none" />
 
@@ -204,51 +204,80 @@ const Hero = () => {
                 { text: "Δx·Δp≥ℏ/2", x: 50, y: 10 },
             ]} />
 
-            <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <div className="relative z-10 text-center px-4 md:px-6 max-w-4xl mx-auto w-full flex flex-col items-center justify-center">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                        hidden: {},
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.6,
+                                delayChildren: 0.2
+                            }
+                        }
+                    }}
+                    className="w-full flex flex-col items-center"
                 >
                     {/* Profile Photo */}
-                    <div className="mb-8 relative inline-block group">
+                    <motion.div 
+                        variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } } }}
+                        className="mb-4 md:mb-6 relative inline-block group"
+                    >
                         <div className="absolute -inset-1 bg-gradient-to-r from-cosmic-red to-cosmic-dark-red rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-                        <img
+                        <motion.img
+                            layoutId="profile-pic"
                             src={profilePic}
                             alt="Profile"
-                            className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-white/10 object-cover shadow-2xl shadow-cosmic-red/20"
+                            className="relative w-28 h-28 md:w-36 md:h-36 rounded-full border-2 border-white/10 object-cover shadow-2xl shadow-cosmic-red/20 mx-auto"
                         />
-                    </div>
+                    </motion.div>
 
-                    <h2 className="text-cosmic-red font-medium tracking-widest mb-4 uppercase">Developer</h2>
-                    <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
+                    <motion.h1 
+                        variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } }}
+                        className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-white mb-2 md:mb-3 leading-tight"
+                    >
                         Ainaan <span className="text-white">Raza</span>
-                    </h1>
-                    <p className="text-gray-400 text-lg md:text-xl mb-4 max-w-2xl mx-auto">
+                    </motion.h1>
+                    
+                    <motion.h2 
+                        variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } }}
+                        className="text-cosmic-red font-medium tracking-widest mb-4 md:mb-5 uppercase text-xs sm:text-sm md:text-base"
+                    >
+                        AI/ML Engineer and Full Stack Developer
+                    </motion.h2>
+                    
+                    <motion.p 
+                        variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } }}
+                        className="text-gray-400 text-sm sm:text-base md:text-xl mb-6 md:mb-8 max-w-2xl mx-auto px-2"
+                    >
                         Strong foundation in Java, JavaScript, Python, and responsive web design, focused on building performant and user-friendly interfaces with integration of AI and Machine Learning.
-                    </p>
+                    </motion.p>
 
-                    <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+                    <motion.div 
+                        variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } }}
+                        className="flex flex-col md:flex-row gap-4 justify-center items-center"
+                    >
                         <motion.a
                             href="#projects"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-8 py-3 bg-white text-black font-bold rounded-full flex items-center gap-2 hover:bg-gray-200 transition-colors"
+                            className="px-6 py-3 md:px-8 bg-white text-black font-bold rounded-full flex items-center gap-2 hover:bg-gray-200 transition-colors text-sm md:text-base"
                         >
-                            View Work <ArrowRight size={20} />
+                            View Work <ArrowRight size={18} />
                         </motion.a>
                         <motion.button
                             onClick={() => setWarpSpeed(!warpSpeed)}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className={`px-8 py-3 border rounded-full transition-colors ${warpSpeed
+                            className={`px-6 py-3 md:px-8 border rounded-full transition-colors text-sm md:text-base ${warpSpeed
                                 ? 'border-cosmic-red bg-cosmic-red/20 text-cosmic-red'
                                 : 'border-white/20 text-white hover:bg-white/10'
                                 }`}
                         >
                             {warpSpeed ? 'Warp Active' : 'Warp Speed'}
                         </motion.button>
-                    </div>
+                    </motion.div>
                 </motion.div>
             </div>
         </section>
