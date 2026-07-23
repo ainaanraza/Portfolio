@@ -256,8 +256,9 @@ const Hero = () => {
 
                     <motion.div 
                         variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } }}
-                        className="flex flex-col md:flex-row gap-4 justify-center items-center"
+                        className="relative flex flex-col md:flex-row gap-4 justify-center items-center"
                     >
+                        <p className="absolute -top-6 md:-top-8 text-xs text-cosmic-red/60 font-mono tracking-wider whitespace-nowrap pointer-events-none">click anywhere to generate photons</p>
                         <motion.a
                             href="#projects"
                             whileHover={{ scale: 1.05 }}
