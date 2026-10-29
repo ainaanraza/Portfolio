@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Atom } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,22 +19,13 @@ const Navbar = () => {
         { name: 'About', href: '#about' },
         { name: 'Projects', href: '#projects' },
         { name: 'Resume', href: '#resume' },
+        { name: 'Awards', href: '#hackathons' },
         { name: 'Contact', href: '#contact' },
     ];
 
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md py-4' : 'bg-transparent py-6'}`}>
-            <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    className="flex items-center gap-2 font-display font-bold text-white z-50"
-                >
-                    <Atom className="text-cosmic-red animate-spin-slow shrink-0 w-6 h-6 md:w-8 md:h-8" />
-                    <span className="text-sm sm:text-base md:text-2xl leading-tight max-w-[65vw] md:max-w-none">
-                        Portfolio-Inspired By Einstein's Theories<span className="text-cosmic-red">.</span>
-                    </span>
-                </motion.div>
+            <div className="max-w-7xl mx-auto px-6 flex justify-end items-center">
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-8">

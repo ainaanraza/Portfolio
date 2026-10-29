@@ -1,0 +1,3 @@
+- The portfolio page (src/components/Portfolio.jsx) renders inside <ClientOnly> because its sections read window during render; allowJs is on so the original .jsx sections import without rewrites.
+- Portfolio project entries share the existing ProjectCard renderer, with a responsive two-column list and per-entry image treatment so screenshots stay fully visible without changing logo presentation.
+- Production build targets Vercel Build Output API v3 via Nitro preset 'vercel'.

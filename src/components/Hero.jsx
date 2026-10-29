@@ -245,8 +245,9 @@ const Hero = () => {
                         className="text-cosmic-red font-medium tracking-widest mb-4 md:mb-5 uppercase text-xs sm:text-sm md:text-base"
                     >
                         AI/ML Engineer and Full Stack Developer
+                        <span className="block">Science and Mathematics Enthusiast</span>
                     </motion.h2>
-                    
+
                     <motion.p 
                         variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } }}
                         className="text-gray-400 text-sm sm:text-base md:text-xl mb-6 md:mb-8 max-w-2xl mx-auto px-2"

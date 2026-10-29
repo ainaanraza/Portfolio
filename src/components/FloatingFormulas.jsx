@@ -32,8 +32,8 @@ const FloatingFormula = ({ formula, index, mousePos }) => {
     const baseY = formula.y || Math.random() * 80 + 10;
 
     // Calculate repulsion from mouse
-    const dx = mousePos.x - (baseX / 100) * window.innerWidth;
-    const dy = mousePos.y - (baseY / 100) * window.innerHeight;
+    const dx = mousePos.x - (baseX / 100) * (typeof window !== "undefined" ? window.innerWidth : 0);
+    const dy = mousePos.y - (baseY / 100) * (typeof window !== "undefined" ? window.innerHeight : 0);
     const distance = Math.sqrt(dx * dx + dy * dy);
     const maxDistance = 200;
 
